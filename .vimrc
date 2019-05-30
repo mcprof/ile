@@ -1,9 +1,12 @@
-let mapleader = ","
+map <Space> <Leader>
 
-set t_Co=256
+command Lightm :silent exec "!source ~/mintty-colors-solarized/sol.light" | redraw!
+command Darkm :silent exec "!source ~/mintty-colors-solarized/sol.dark" | redraw!
+"set t_Co=256
 "colors zenburn
-set background=dark
-colorscheme solarized8
+"syntax enable
+"set background=dark
+"colorscheme solarized
 
 set nocompatible "choose no compatibility with legacy vi
 syntax enable
@@ -27,7 +30,7 @@ set smartcase                   " ... unless they contain at least one capital l
 inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap jj <Esc>
-set undofile
+"set undofile
 nnoremap ; :
 
 nnoremap <C-h> <C-w>h
