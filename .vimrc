@@ -1,4 +1,10 @@
 let mapleader = ","
+
+set t_Co=256
+"colors zenburn
+set background=dark
+colorscheme solarized8
+
 set nocompatible "choose no compatibility with legacy vi
 syntax enable
 set encoding=utf-8
@@ -30,6 +36,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
+noremap <silent> <c-_> :let @/ = ""<CR>
 
 set undofile
 au FocusLost * :wa
@@ -40,10 +47,14 @@ au BufNewFile,BufRead *.py
     \ set textwidth=79 |
     \ set expandtab |
     \ set autoindent |
+"    \ set wrap |
     \ set fileformat=unix
 
+set number
 set splitbelow
 set splitright
+
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
 " Bind F5 to save file if modified and execute python script in a buffer.
 nnoremap <silent> <F5> :call SaveAndExecutePython()<CR><C-w>k
