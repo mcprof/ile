@@ -30,7 +30,7 @@ set smartcase                   " ... unless they contain at least one capital l
 inoremap jk <Esc>
 inoremap kj <Esc>
 inoremap jj <Esc>
-"set undofile
+set undofile
 " nnoremap ; :
 
 nnoremap <C-h> <C-w>h
@@ -41,7 +41,6 @@ nnoremap <leader>w <C-w>v<C-w>l
 nnoremap <leader>ev <C-w><C-v><C-l>:e $MYVIMRC<cr>
 noremap <silent> <c-_> :let @/ = ""<CR>
 
-set undofile
 au FocusLost * :wa
 au BufNewFile,BufRead *.py
     \ set tabstop=4 |
