@@ -116,3 +116,5 @@ function! SaveAndExecutePython()
     setlocal readonly
     setlocal nomodifiable
 endfunction
+
+"autocmd BufWinLeave *.* mkviewautocmd BufWinEnter *.* silent loadview "preserves code folds across saving and re-opening, from https://www.freecodecamp.org/news/learn-linux-vim-basic-features-19134461ab85/?gi=98085b19ac53
