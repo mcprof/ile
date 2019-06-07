@@ -1,5 +1,6 @@
 map <Space> <Leader>
 
+let g:netrw_liststyle = 1
 autocmd CursorHold,CursorHoldI * update
 set clipboard=unnamed
 command Lightm :silent exec "!source ~/mintty-colors-solarized/sol.light" | redraw!
